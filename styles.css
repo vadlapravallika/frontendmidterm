@@ -82,14 +82,14 @@ button:hover {
 }
 
 .career-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    margin: 15px 0; /* Space between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: calc(33% - 20px);
-    box-sizing: border-box;
     text-align: center;
 }
 
@@ -107,6 +107,27 @@ button:hover {
 .career-card p {
     font-size: 1em;
     color: #666;
+}
+
+/* Remove default list styling */
+.career-card ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+/* Style list items */
+.career-card ul li {
+    margin-bottom: 8px; /* Space between list items */
+}
+
+.career-card ul li a {
+    color: #3498db; /* Link color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.career-card ul li a:hover {
+    color: #2980b9; /* Darker blue on hover */
 }
 
 footer {
