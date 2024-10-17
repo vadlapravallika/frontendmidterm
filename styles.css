@@ -1,153 +1,175 @@
+/* Reset box-sizing and remove default margins and paddings */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* General body styles: setting a clean font, background color, and flex layout */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f7f8fc;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font for text */
+    background-color: #f7f8fc; /* Light background color */
+    color: #333; /* Text color */
+    line-height: 1.6; /* Line spacing */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Ensures content stretches to the full height of the viewport */
 }
 
+/* Header styles: center alignment, padding, and background color */
 header {
     text-align: center;
     padding: 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
 }
 
+/* Header h1 (main heading) styles */
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2.5em; /* Large text size */
+    margin-bottom: 10px; /* Spacing below the heading */
 }
 
+/* Header paragraph styles */
 header p {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Slightly smaller text for the subtitle */
 }
 
+/* Main content area styling */
 main {
-    flex: 1;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex: 1; /* Fills remaining space */
+    padding: 20px; /* Adds space inside the main container */
+    max-width: 1200px; /* Maximum width for content */
+    margin: 0 auto; /* Centers the main content */
 }
 
+/* Heading 2 styles for subheadings */
 h2 {
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 1.8em;
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Adds spacing below heading */
+    font-size: 1.8em; /* Font size for subheadings */
 }
 
+/* Form styles */
 form {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Adds space below form */
 }
 
+/* Label styles for form elements */
 label {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Font size for labels */
 }
 
+/* Styles for the dropdown (select element) */
 select {
-    padding: 10px;
-    font-size: 1.1em;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
+    padding: 10px; /* Padding inside the dropdown */
+    font-size: 1.1em; /* Font size */
+    margin-right: 10px; /* Space to the right of the select box */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #fff; /* White background */
 }
 
+/* Button styling */
 button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #4CAF50; /* Green button background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.1em; /* Font size for button text */
+    transition: background-color 0.3s ease; /* Smooth transition effect on hover */
 }
 
+/* Hover effect for buttons */
 button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Slightly darker green when hovered */
 }
 
+/* Container for career cards, making them responsive with spacing */
 .career-cards {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: wrap; /* Allow cards to wrap onto multiple lines */
+    gap: 20px; /* Space between the cards */
 }
 
+/* Individual career card styling */
 .career-card {
     background-color: #f9f9f9; /* Light gray background */
     border: 1px solid #ccc; /* Light gray border */
     border-radius: 5px; /* Rounded corners */
     padding: 20px; /* Padding inside the card */
     margin: 15px 0; /* Space between cards */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(33% - 20px);
-    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation when hovered */
+    width: calc(33% - 20px); /* Each card takes up roughly 1/3 of the width */
+    text-align: center; /* Center align text inside cards */
 }
 
+/* Hover effect for career cards */
 .career-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px); /* Moves the card upwards */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow when hovered */
 }
 
+/* Styles for the title in each career card */
 .career-card h3 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    color: #4CAF50;
+    margin-bottom: 10px; /* Adds space below the title */
+    font-size: 1.5em; /* Font size for titles */
+    color: #4CAF50; /* Green color for titles */
 }
 
+/* Styles for the text inside the career card */
 .career-card p {
-    font-size: 1em;
-    color: #666;
+    font-size: 1em; /* Font size for description */
+    color: #666; /* Gray text color */
 }
 
-/* Remove default list styling */
+/* List styling inside career cards */
 .career-card ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
 }
 
-/* Style list items */
+/* Styling for list items */
 .career-card ul li {
     margin-bottom: 8px; /* Space between list items */
 }
 
+/* Links inside the list (YouTube Channels and Resources) */
 .career-card ul li a {
-    color: #3498db; /* Link color */
-    text-decoration: none; /* No underline */
-    transition: color 0.3s; /* Smooth transition for hover */
+    color: #3498db; /* Blue link color */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s; /* Smooth color transition on hover */
 }
 
+/* Hover effect for links */
 .career-card ul li a:hover {
-    color: #2980b9; /* Darker blue on hover */
+    color: #2980b9; /* Darker blue when hovered */
 }
 
+/* Footer styling */
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+    text-align: center; /* Centers the text */
+    padding: 10px; /* Padding inside the footer */
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
     position: relative;
-    bottom: 0;
-    width: 100%;
+    bottom: 0; /* Sticks the footer to the bottom */
+    width: 100%; /* Footer takes up the full width */
 }
 
+/* Responsive design: adjusts card width on smaller screens */
 @media (max-width: 768px) {
     .career-card {
-        width: calc(50% - 20px);
+        width: calc(50% - 20px); /* Cards take up half the screen width */
     }
 }
 
+/* Responsive design: adjusts card width on very small screens */
 @media (max-width: 480px) {
     .career-card {
-        width: 100%;
+        width: 100%; /* Cards take up the full width on small screens */
     }
 }
