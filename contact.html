@@ -9,12 +9,12 @@
 </head>
 <body>
     <header>
-        <h1>Discover Your Future Career</h1>
+        <h1>Contact Us</h1>
         <nav>
             <ul class="nav justify-content-center">
                 <a class="nav-link text-white" href="index.html">Home</a>
                 <a class="nav-link text-white" href="services.html">Career Services</a>
-                <a class="nav-link text-white" href="contact.html">Contact</a>
+                <a class="nav-link text-white" href="about.html">About Us</a>
             </ul>
         </nav>
     </header>
@@ -24,7 +24,7 @@
             <h2>We'd Love to Hear from You!</h2>
             <p>If you have any questions, comments, or feedback, please fill out the form below.</p>
             
-            <form id="contactForm" action="submit_contact.php" method="POST">
+            <form id="contactForm">
                 <div>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -46,6 +46,28 @@
         <p>Made with ♥ for your career journey.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Select the contact form
+        const contactForm = document.getElementById('contactForm');
+
+        // Add event listener to handle form submission
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Gather form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Display the data in an alert (or you can log it to the console)
+            alert(`Thank you for your message, ${name}!\n\nYour Email: ${email}\nYour Message: ${message}`);
+
+            // Optionally, you can store the data in local storage
+            localStorage.setItem('contactData', JSON.stringify({ name, email, message }));
+
+            // Reset the form fields
+            contactForm.reset();
+        });
+    </script>
 </body>
 </html>
