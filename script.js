@@ -435,10 +435,9 @@ function showCareerPaths() {
     careerResults.innerHTML = '';
 
     if (!selectedInterest) {
-        careerResults.innerHTML = '<p>Please select an interest to see career recommendations.</p>';
-        return;
+        alert("Please select an interest to see career recommendations.");
+        
     }
-
     const category = careerPaths.find(path => path.category === selectedInterest);
 
     if (category) {
