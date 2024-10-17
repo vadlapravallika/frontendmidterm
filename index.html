@@ -8,32 +8,30 @@
 </head>
 <body>
     <header>
-        <h1>Career Path Selector</h1>
-        <p>Select your interests to find suitable career paths.</p>
+        <h1>Discover Your Future Career</h1>
+        <p>Explore career paths that match your interests and passions.</p>
     </header>
 
     <main>
         <section>
-            <h2>Select Your Interests</h2>
+            <h2>Select Your Field of Interest</h2>
             <form id="careerForm">
-                <fieldset>
-                    <legend>Interests</legend>
-                    <label>
-                        <input type="checkbox" name="interest" value="technology"> Technology
-                    </label>
-                    <label>
-                        <input type="checkbox" name="interest" value="business"> Business
-                    </label>
-                    <label>
-                        <input type="checkbox" name="interest" value="creative"> Creative Arts
-                    </label>
-                </fieldset>
-                <button type="button" onclick="showCareerPaths()">Find Career Paths</button>
+                <label for="interestSelect">Choose an interest:</label>
+                <select id="interestSelect">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="technology">Technology</option>
+                    <option value="business">Business</option>
+                    <option value="creative">Creative Arts</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="education">Education</option>
+                </select>
+                <button type="button" onclick="showCareerPaths()">Discover Careers</button>
             </form>
         </section>
 
         <section>
-            <h2>Career Recommendations</h2>
+            <h2>Your Career Recommendations</h2>
             <div id="careerResults" class="career-cards">
                 <!-- Career paths will be dynamically inserted here -->
             </div>
@@ -41,7 +39,7 @@
     </main>
 
     <footer>
-        <p>Made with ♥ for career explorers.</p>
+        <p>Made with ♥ for your career journey.</p>
     </footer>
 
     <script src="script.js"></script>
