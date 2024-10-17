@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Selector</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Discover Your Future Career</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <a class="nav-link text-white" href="index.html">About Us</a>
+                <a class="nav-link text-white" href="services.html">Career services</a>
+                <a class="nav-link text-white" href="contact.html">Contact</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Select Your Field of Interest</h2>
+            <form id="careerForm">
+                <label for="interestSelect">Choose an interest:</label>
+                <select id="interestSelect">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="technology">Technology</option>
+                    <option value="business">Business</option>
+                    <option value="creative">Creative Arts</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="education">Education</option>
+                </select>
+                <button type="button" onclick="showCareerPaths()">Discover Careers</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Your Career Recommendations</h2>
+            <article id="careerResults" class="career-cards">
+                <!-- Career recommendations will be shown here -->
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Made with ♥ for your career journey.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
