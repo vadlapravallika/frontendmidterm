@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Career Path Selector</h1>
+        <p>Select your interests to find suitable career paths.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Select Your Interests</h2>
+            <form id="careerForm">
+                <fieldset>
+                    <legend>Interests</legend>
+                    <label>
+                        <input type="checkbox" name="interest" value="technology"> Technology
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interest" value="business"> Business
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interest" value="creative"> Creative Arts
+                    </label>
+                </fieldset>
+                <button type="button" onclick="showCareerPaths()">Find Career Paths</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Career Recommendations</h2>
+            <div id="careerResults" class="career-cards">
+                <!-- Career paths will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with ♥ for career explorers.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
