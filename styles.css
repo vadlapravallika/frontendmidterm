@@ -1,212 +1,344 @@
-/* Reset box-sizing and remove default margins and paddings */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* General body styles: setting a clean font, background color, and flex layout */
-  body {
-    background-color: #f7f8fc; /* Light background color */
-    color: #333; /* Text color */
-    line-height: 1.6; /* Line spacing */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures content stretches to the full height of the viewport */
-  }
-  
-  /* Header styles: center alignment, padding, and background color */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.obj-width {
+  max-width: 1200px;
+  margin: auto;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+header {
+  height: 120px;
+  background-color: #1f4a40;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  height: 100px;
+  width: 200px;
+}
+#menu li a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 40px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+nav {
+  display: flex;
+}
+#menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+#bar {
+  color: #fff;
+  display: none;
+}
+.mainsec {
+  background-color: #1f4a40;
+}
+.maindiv {
+  display: flex;
+  justify-content: space-between;
+  height: 130vh;
+  align-items: center;
+}
+.left {
+  color: #fff;
+  width: 45%;
+}
+.right {
+  width: 50%;
+}
+.right img {
+  width: 100%;
+  object-fit: cover;
+  padding-top: 50px;
+}
+.left p {
+  padding: 1.5rem 0;
+}
+.index-section {
+  align-items: center;
+  text-align: center;
+}
+video {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.career-session {
+  padding-top: 10%;
+  text-align: center;
+}
+.recommendations {
+  text-align: center;
+  display: block;
+}
+
+select {
+  padding: 10px; /* Padding inside the dropdown */
+  font-size: 1.1em; /* Font size */
+  margin-right: 10px; /* Space to the right of the select box */
+  border: 1px solid #ccc; /* Light border color */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #fff; /* White background */
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px; /* Padding inside the button */
+  background-color: #1f4a40; /* Green button background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1.1em; /* Font size for button text */
+  transition: background-color 0.3s ease; /* Smooth transition effect on hover */
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #1f4a40; /* Slightly darker green when hovered */
+}
+
+article h2 {
+  display: block;
+}
+/* Container for career cards, making them responsive with spacing */
+.career-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap onto multiple lines */
+  gap: 20px; /* Space between the cards */
+}
+
+/* Individual career card styling */
+.career-card {
+  background-color: #f9f9f9; /* Light gray background */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  margin: 15px 0; /* Space between cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation when hovered */
+  width: calc(33% - 20px); /* Each card takes up roughly 1/3 of the width */
+  text-align: center; /* Center align text inside cards */
+}
+
+/* Hover effect for career cards */
+.career-card:hover {
+  transform: translateY(-10px); /* Moves the card upwards */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow when hovered */
+}
+
+/* Styles for the title in each career card */
+.career-card h3 {
+  margin-bottom: 10px; /* Adds space below the title */
+  font-size: 1.5em; /* Font size for titles */
+  color: #4caf50; /* Green color for titles */
+}
+
+/* Styles for the text inside the career card */
+.career-card p {
+  font-size: 1em; /* Font size for description */
+  color: #666; /* Gray text color */
+}
+
+/* List styling inside career cards */
+.career-card ul {
+  list-style-type: none; /* Removes default bullet points */
+  padding: 0; /* Removes default padding */
+}
+
+/* Styling for list items */
+.career-card ul li {
+  margin-bottom: 8px; /* Space between list items */
+}
+
+/* Links inside the list (YouTube Channels and Resources) */
+.career-card ul li a {
+  color: #3498db; /* Blue link color */
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Hover effect for links */
+.career-card ul li a:hover {
+  color: #2980b9; /* Darker blue when hovered */
+}
+form {
+  margin-bottom: 20px; /* Adds space below form */
+}
+form div {
+  padding-bottom: 10px;
+}
+.index-section {
+  text-align: center;
+}
+.section {
+  /* Fixed width for the section */
+  margin-top: 10%; /* Padding inside the section */
+}
+.left1 {
+  height: auto;
+  color: black;
+  width: 50%;
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Box shadow */
+  margin: auto; /* Centers horizontally */
+  text-align: center;
+}
+.left1 p {
+  padding: 1.5rem 0;
+}
+.maindiv1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right1 {
+  width: 40%;
+}
+.right1 img {
+  width: 100%;
+  object-fit: cover;
+  padding: 15%;
+}
+input {
+  padding: 5px;
+}
+footer {
+  align-items: center;
+  text-align: center; /* Centers the text */
+  padding: 20px; /* Padding inside the footer */
+  background-color: #1f4a40; /* Dark background */
+  color: #fff; /* White text */
+  bottom: 0%; /* Sticks the footer to the bottom */
+  width: 100%;
+  height: 50px;
+  position: relative;
+  /* Footer takes up the full width */
+}
+
+@media (max-width: 699px) {
   header {
-    height: 120px;
-    background-color: #dedede; /* Green background */
-    color: white; /* White text */
-    display: flex;
-    position: relative;
-    top: 0; /* Positions it at the top */
-    left: 0; /* Aligns it to the left */
-    width: 100%; /* Makes the header full width */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 10px;
   }
-  
-  /* Header h1 (main heading) styles */
-  header h1 {
-    font-size: 2.5em; /* Large text size */
-    margin-bottom: 10px; /* Spacing below the heading */
+  #menu {
+    background-color: #fff;
+    display: block;
+    width: 280px;
+    height: auto;
+    position: absolute;
+    top: 120px;
+    right: -100%;
+    padding: 30px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
-  h1 {
-    text-align: center;
+  #menu.active {
+    right: 10px;
+    opacity: 1;
   }
-  
-  /* Header paragraph styles */
-  header p {
-    font-size: 1.2em; /* Slightly smaller text for the subtitle */
+  #menu li {
+    padding: 1rem;
   }
-  
-  /* Main content area styling */
-  main {
-    flex: 1; /* Fills remaining space */
-    padding: 20px; /* Adds space inside the main container */
-    max-width: 1200px; /* Maximum width for content */
-    margin: 0 auto; /* Centers the main content */
+  #menu li a {
+    color: #26767f;
+    font-weight: 700;
   }
-  
-  /* Heading 2 styles for subheadings */
-  h2 {
-    text-align: center;
-    color: #333; /* Dark text color */
-    margin-bottom: 10px; /* Adds spacing below heading */
-    font-size: 1.8em; /* Font size for subheadings */
-  }
-  nav {
-    display: flex;
-  }
-  img {
-    height: 120px;
-    width: 170px;
-    float: left;
-  }
-  nav ul a {
-    text-decoration: none;
-    padding-right: 0%;
-    float: inline-start;
-    margin-left: 100px;
-    padding-top: 40px;
-    color: black;
-  }
-  /* Form styles */
-  form {
-    margin-bottom: 20px; /* Adds space below form */
-    text-align: center;
-  }
-  form div {
-    padding-bottom: 10px;
+  #bar {
+    cursor: pointer;
+    display: block;
+    font-size: 1.7rem;
   }
   video {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Box shadow */
-    border-radius: 10px; /* Rounded corners */
+    height: auto;
+    width: auto;
   }
-  .index-section {
-    text-align: center;
+  .maindiv {
+    display: block;
+    justify-content: center;
+    height: auto;
+    align-items: start;
+    padding: 8rem 1rem 2rem;
   }
-  .section {
-    /* Fixed width for the section */
-    padding: 20px; /* Padding inside the section */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #fff; /* White background */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Box shadow */
-    margin: auto; /* Centers horizontally */
-    text-align: center;
+  .left {
+    width: auto;
   }
-  /* Styles for the dropdown (select element) */
-  select {
-    padding: 10px; /* Padding inside the dropdown */
-    font-size: 1.1em; /* Font size */
-    margin-right: 10px; /* Space to the right of the select box */
-    border: 1px solid #ccc; /* Light border color */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #fff; /* White background */
+  .right {
+    width: auto;
   }
-  
-  /* Button styling */
-  button {
-    padding: 10px 20px; /* Padding inside the button */
-    background-color: #4caf50; /* Green button background */
-    color: white; /* White text */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 1.1em; /* Font size for button text */
-    transition: background-color 0.3s ease; /* Smooth transition effect on hover */
-  }
-  
-  /* Hover effect for buttons */
-  button:hover {
-    background-color: #45a049; /* Slightly darker green when hovered */
-  }
-  
-  /* Container for career cards, making them responsive with spacing */
-  .career-cards {
-    display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap onto multiple lines */
-    gap: 20px; /* Space between the cards */
-  }
-  
-  /* Individual career card styling */
-  .career-card {
-    background-color: #f9f9f9; /* Light gray background */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 20px; /* Padding inside the card */
-    margin: 15px 0; /* Space between cards */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation when hovered */
-    width: calc(33% - 20px); /* Each card takes up roughly 1/3 of the width */
-    text-align: center; /* Center align text inside cards */
-  }
-  
-  /* Hover effect for career cards */
-  .career-card:hover {
-    transform: translateY(-10px); /* Moves the card upwards */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow when hovered */
-  }
-  
-  /* Styles for the title in each career card */
-  .career-card h3 {
-    margin-bottom: 10px; /* Adds space below the title */
-    font-size: 1.5em; /* Font size for titles */
-    color: #4caf50; /* Green color for titles */
-  }
-  
-  /* Styles for the text inside the career card */
-  .career-card p {
-    font-size: 1em; /* Font size for description */
-    color: #666; /* Gray text color */
-  }
-  
-  /* List styling inside career cards */
-  .career-card ul {
-    list-style-type: none; /* Removes default bullet points */
-    padding: 0; /* Removes default padding */
-  }
-  
-  /* Styling for list items */
-  .career-card ul li {
-    margin-bottom: 8px; /* Space between list items */
-  }
-  
-  /* Links inside the list (YouTube Channels and Resources) */
-  .career-card ul li a {
-    color: #3498db; /* Blue link color */
-    text-decoration: none; /* Removes underline */
-    transition: color 0.3s; /* Smooth color transition on hover */
-  }
-  
-  /* Hover effect for links */
-  .career-card ul li a:hover {
-    color: #2980b9; /* Darker blue when hovered */
-  }
-  
-  /* Footer styling */
-  footer {
-    text-align: center; /* Centers the text */
-    padding: 10px; /* Padding inside the footer */
-    background-color: #333; /* Dark background */
-    color: #fff; /* White text */
-    bottom: 0; /* Sticks the footer to the bottom */
+  .right img {
     width: 100%;
-    position: relative; /* Footer takes up the full width */
+    object-fit: cover;
+    padding-top: 50px;
   }
-  
-  /* Responsive design: adjusts card width on smaller screens */
-  @media (max-width: 768px) {
-    .career-card {
-      width: calc(50% - 20px); /* Cards take up half the screen width */
-    }
+  .maindiv1 {
+    display: block;
+    justify-content: center;
+    height: auto;
+    align-items: start;
+    padding: 8rem 1rem 2rem;
   }
-  
-  /* Responsive design: adjusts card width on very small screens */
-  @media (max-width: 480px) {
-    .career-card {
-      width: 100%; /* Cards take up the full width on small screens */
-    }
+  .left1 {
+    padding: 10px;
+    width: auto;
   }
+  .right1 {
+    width: auto;
+  }
+  .right1 img {
+    width: 100%;
+    object-fit: cover;
+    padding-top: 50px;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 40px;
+  }
+  button {
+    margin-top: 10px;
+  }
+  .career-session {
+    padding-top: 35%;
+  }
+  .recommendations {
+    padding: 10%;
+    text-align: center;
+    display: block;
+  }
+  .career-cards {
+    margin-top: 50px;
+  }
+  .career-card {
+    width: calc(50% - 20px); /* Cards take up half the screen width */
+  }
+  .career-card {
+    width: 100%; /* Cards take up the full width on small screens */
+  }
+}

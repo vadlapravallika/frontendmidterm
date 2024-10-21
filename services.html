@@ -5,23 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Career Path Selector</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <nav>
-        <img src="logo.jpg" alt="logo" />
-        <ul class="nav justify-content-center">
-          <a class="nav-link text-white" href="index.html">Home</a>
-          <a class="nav-link text-white" href="services.html">Career Services</a>
-          <a class="nav-link text-white" href="contact.html">Contact</a>
-        </ul>
-      </nav>
+      <div class="navbar obj-width">
+        <img class="logo" src="pictures/logo2.png" alt="logo" />
+        <nav>
+          <ul id="menu">
+            <li><a class="nav-link text-white" href="index.html">Home</a></li>
+            <li>
+              <a class="nav-link text-white" href="services.html"
+                >Career Services</a
+              >
+            </li>
+            <li>
+              <a class="nav-link text-white" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <i id="bar" class="bx bx-menu"></i>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section>
-        <h1>Discover Your Future Career</h1>
+    <main style="min-height: 95vh">
+      <section class="career-session obj-width">
         <h2>Select Your Field of Interest</h2>
         <form id="careerForm">
           <label for="interestSelect">Choose an interest:</label>
@@ -40,7 +55,7 @@
         </form>
       </section>
 
-      <section>
+      <section class="recommendations obj-width">
         <h2>Your Career Recommendations</h2>
         <article id="careerResults" class="career-cards">
           <!-- Career recommendations will be shown here -->
@@ -52,5 +67,7 @@
     </footer>
 
     <script src="script.js"></script>
-  </body>
+
+    <script src="toggle.js"></script>
+  </body>
 </html>
