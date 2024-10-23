@@ -260,6 +260,8 @@ footer {
   header {
     padding: 10px;
   }
+
+  /* Mobile menu settings */
   #menu {
     background-color: #fff;
     display: block;
@@ -267,30 +269,40 @@ footer {
     height: auto;
     position: absolute;
     top: 120px;
-    right: -100%;
+    right: -100%; /* Initially hidden off-screen */
     padding: 30px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease; /* Smooth slide in */
   }
+  
   #menu.active {
-    right: 10px;
+    right: 10px; /* Menu slides into view when active */
     opacity: 1;
   }
+
   #menu li {
     padding: 1rem;
   }
+
   #menu li a {
     color: #26767f;
     font-weight: 700;
   }
+
+  /* Show mobile menu icon */
   #bar {
     cursor: pointer;
     display: block;
     font-size: 1.7rem;
   }
+
+  /* Adjust video for smaller screens */
   video {
     height: auto;
-    width: auto;
+    width: 100%; /* Ensure video is responsive */
   }
+
+  /* Main content adjustments */
   .maindiv {
     display: block;
     justify-content: center;
@@ -298,17 +310,17 @@ footer {
     align-items: start;
     padding: 8rem 1rem 2rem;
   }
-  .left {
-    width: auto;
+
+  .left, .right {
+    width: 100%; /* Full width on mobile */
   }
-  .right {
-    width: auto;
-  }
+
   .right img {
     width: 100%;
     object-fit: cover;
     padding-top: 50px;
   }
+
   .maindiv1 {
     display: block;
     justify-content: center;
@@ -316,41 +328,48 @@ footer {
     align-items: start;
     padding: 8rem 1rem 2rem;
   }
-  .left1 {
+
+  .left1, .right1 {
+    width: 100%; /* Full width for these sections */
     padding: 10px;
-    width: auto;
   }
-  .right1 {
-    width: auto;
-  }
+
   .right1 img {
     width: 100%;
     object-fit: cover;
     padding-top: 50px;
   }
+
   h2 {
     font-size: 2rem;
     font-weight: 600;
     line-height: 40px;
   }
+
   button {
     margin-top: 10px;
   }
+
   .career-session {
     padding-top: 35%;
   }
+
   .recommendations {
     padding: 10%;
     text-align: center;
     display: block;
   }
+
+  /* Ensure career cards adjust properly */
   .career-cards {
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
   .career-card {
-    width: calc(50% - 20px); /* Cards take up half the screen width */
-  }
-  .career-card {
-    width: 100%; /* Cards take up the full width on small screens */
-  }
+    width: 100%; /* Cards take up the full width */
+    margin-bottom: 20px; /* Add space between cards */
+  }
 }
